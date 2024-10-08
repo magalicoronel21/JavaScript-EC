@@ -17,7 +17,7 @@ function verificarParidad(numero) {
 function clasificarEdad(edad) {
     if (edad < 18) {
         console.log("Menor de edad");
-    } else if (edad <= 65) {
+    } else if (edad >= 18 && edad <= 65) {
         console.log("Adulto");
     } else {
         console.log("Adulto mayor");
@@ -57,7 +57,7 @@ function imprimirPares(numero) {
 function detenerEnSeis() {
     for (let i = 1; i <= 10; i++) {
         if (i === 6) {
-            break;  // Detiene el bucle al llegar a 6
+            break;  
         }
         console.log(i);
     }
@@ -68,7 +68,7 @@ function detenerEnSeis() {
 function saltarCinco() {
     for (let i = 1; i <= 10; i++) {
         if (i === 5) {
-            continue;  // Salta el número 5
+            continue;  
         }
         console.log(i);
     }
@@ -123,12 +123,12 @@ function esVocal(letra) {
 // Ejercicio 10: Condicionales complejos con operadores lógicos
 // Instrucción: Escribe una función que reciba tres números y determine si todos son positivos, al menos uno es negativo, o todos son negativos. Usa operadores lógicos (`&&`, `||`).
 function evaluarNumeros(a, b, c) {
-    if (a > 0 && b > 0 && c > 0) {
-        console.log("Todos los números son positivos");
-    } else if (a < 0 || b < 0 || c < 0) {
-        console.log("Al menos uno es negativo");
+    if (a < 0 && b < 0 && c < 0) {
+        console.log("Todos son negativos");
+    } else if (a > 0 && b > 0 && c > 0) {
+        console.log("Todos son positivos");
     } else {
-        console.log("Todos los números son negativos");
+        console.log("Al menos uno es negativo");
     }
 }
 // Exportar todas las funciones
